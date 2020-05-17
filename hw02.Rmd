@@ -23,10 +23,10 @@ head(m.price)
 
 ```{r}
 library(reshape2)
-mprice.reorder<-dcast(m.price,data~id)
-head(mprice.reorder)
-mprice.reorder.1<- mprice.reorder[,1:15]
-class(mprice.reorder.1)
+#mprice.reorder<-dcast(m.price,data~id)
+#head(mprice.reorder)
+#mprice.reorder.1<- mprice.reorder[,1:15]
+#class(mprice.reorder.1)
 ```
 
 

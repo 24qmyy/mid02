@@ -52,8 +52,24 @@ data<-as.Date(as.yearmon(as.character(mprice.reorder.1$date),format = "%Y%m"))
 
  
 mprice.reorder.xts<- xts(mprice.reorder[,-1].order.by = date)
+###############
+read.table("~/a.txt")
+a.price<- read.table("~/a.txt")
+head(a.price)
+
+a.price<-a.price[, -2]
+colnames(a.price)<- c("id","date","close")
+head(a.price)
+
+library(reshape2)
+aprice.reorder<-dcast(a.price,data~id)
+head(aprice.reorder)
+aprice.reorder.1<- aprice.reorder[,1:15]
+class(aprice.reorder.1)
+
 
 
 #library(reshape2)
 #library(tidyverse)
+
  
