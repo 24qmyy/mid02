@@ -9,8 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 ```{r}
 read.table("~/2018.txt")
 m.price<- read.table("~/2018.txt")
@@ -23,7 +21,6 @@ colnames(m.price)<- c("id","date","close")
 head(m.price)
 ```
 
-
 ```{r}
 library(reshape2)
 mprice.reorder<-dcast(m.price,data~id)
@@ -31,7 +28,6 @@ head(mprice.reorder)
 mprice.reorder.1<- mprice.reorder[,1:15]
 class(mprice.reorder.1)
 ```
-
 
 
 ```{r}
